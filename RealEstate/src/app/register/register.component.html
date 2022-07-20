@@ -14,8 +14,8 @@
 
             <div class="mb-3">
                 <label class="form-label" for="pwd">Password</label>
-                <input type="password" class="form-control" [(ngModel)]="registerUserData.password"
-                    placeholder="Password" name="pwd" required>
+                <input type="password" class="form-control" [minLength]="8" [(ngModel)]="registerUserData.password"
+                    [ngModelOptions]="{standalone: true}" placeholder="Password" name="pwd">
 
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
@@ -24,7 +24,7 @@
             <div class="mb-3">
                 <label class="form-label" for="floatingemail">Email Id</label>
                 <input type="email" class="form-control" id="floatingemail" [(ngModel)]="registerUserData.email"
-                placeholder="Enter Email-Id / example@abc.com" name="pwd" required>
+                    placeholder="Enter Email-Id / example@abc.com" name="pwd" required>
 
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>

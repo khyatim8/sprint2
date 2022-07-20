@@ -9,9 +9,9 @@
         <div class="container-fluid d-flex"> <a class="navbar-brand" href="#" routerLink="/home1">E-HouseBooking</a>
           <div class="col-md-13">
             <div class="d-flex form-inputs">
-              <input class="form-control" type="text" [(ngModel)]="searchTerm" (keyup)="search($event)"
+              <input class="form-control" type="text"  *ngIf="LoggedIn(true)" [(ngModel)]="searchTerm" (keyup)="search($event)"
                 placeholder="Search for location..." />
-              <i class="bx bx-search"></i>
+              <i class="bx bx-search" ></i>
             </div>
           </div>
           <!-- <a class="navbar-brand" routerLink="/home1">House Booking</a> -->

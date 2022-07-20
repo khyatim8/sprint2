@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from './Account/home.component';
 import { AdminComponent } from './admin/admin.component';
@@ -14,7 +14,10 @@ import { OrderComponent } from './order/order.component';
 import { PropertyComponent } from './property/property.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthService } from './services/auth.service';
+import { FilterPipe } from './shared/filter.pipe';
+import { SseeOrderComponent } from './ssee-order/ssee-order.component';
 import { VenderComponent } from './vender/vender.component';
+
 
 @NgModule({
   declarations: [
@@ -27,13 +30,16 @@ import { VenderComponent } from './vender/vender.component';
     Home1Component,
     HouseregisterComponent,
     VenderComponent,
-    AdminComponent
+    AdminComponent,
+    FilterPipe,
+    SseeOrderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

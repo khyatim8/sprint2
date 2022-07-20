@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
 import { PropertyComponent } from './property/property.component';
 import { RegisterComponent } from './register/register.component';
+import { SseeOrderComponent } from './ssee-order/ssee-order.component';
 import { VenderComponent } from './vender/vender.component';
 
 const routes: Routes = [
@@ -59,7 +60,11 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
-  }
+  },
+  {
+    path: 'see-order',
+    component: SseeOrderComponent
+  },
 
 
 ];
